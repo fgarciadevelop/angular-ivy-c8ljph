@@ -1,0 +1,27 @@
+<div class="container">
+  <form [formGroup]="resultsGroup">
+    <input
+      type="text"
+      placeHolder="Nuevo elemento..."
+      formControlName="elementoControl"
+    />
+    <button style="margin-left: 5px;" (click)="addElemento($event)">
+      Añadir
+    </button>
+  </form>
+
+  <div class="listado">
+    <div class="item" *ngFor="let item of listado; let i = index">
+      {{ i + 1 }}
+      <input type="checkbox" (click)="activeElemento(item)" />
+      <span [ngClass]="item.active ? '' : 'marked'" class="item-text">{{
+        item.value
+      }}</span>
+      <button (click)="deleteElemento(i)">Eliminar</button>
+    </div>
+  </div>
+
+  <div *ngIf="listado.length === 0">
+    <h1 class="message-error">No hay elementos!</h1>
+  </div>
+</div>

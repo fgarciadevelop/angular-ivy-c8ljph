@@ -1,0 +1,20 @@
+.message-error {
+  background-color: red;
+  padding: 20px;
+}
+
+.listado {
+  margin-top: 5%;
+}
+
+.item {
+  margin-top: 2.5%;
+}
+
+.marked {
+  text-decoration: line-through;
+}
+
+.item-text {
+  margin: 0 1%;
+}

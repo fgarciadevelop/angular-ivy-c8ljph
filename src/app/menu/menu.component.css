@@ -1,0 +1,14 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-item {
+  padding-right: 2.5%;
+  padding-left: 2.5%;
+  cursor: pointer;
+}
+
+.menu-item:first-child {
+  border-right: 1px solid black;
+}
